@@ -4,6 +4,12 @@ import { Icon, Card } from 'antd'
 import CountUp from 'react-countup'
 import styles from './numberCard.less'
 
+/**
+ * 数据来源：this.props， file: ./index.js, model: dashboard, state: dashboard.numbers
+ * 状态管理: function components 不管理状态
+ * 布局：Card, 内部用<p><CountUp>
+ */
+
 function NumberCard ({
   icon, color, title, number, countUp,
 }) {

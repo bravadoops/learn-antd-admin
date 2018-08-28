@@ -15,13 +15,22 @@ const bodyStyle = {
 }
 
 function Dashboard ({ dashboard, loading }) {
+  // data source: this.props.dashboard 
+  // file: ./model.js, namespace: dashboard 
   const {
     weather, sales, quote, numbers, recentSales, comments, completed, browser, cpu, user,
-  } = dashboard
-  const numberCards = numbers.map((item, key) => (<Col key={key} lg={6} md={12}>
-    <NumberCard {...item} />
-  </Col>))
-
+  } = dashboard;
+  const numberCards = numbers.map((item, key) => (
+    <Col key={key} lg={6} md={12}>
+      <NumberCard {...item} />
+    </Col>
+  ));
+  /**
+   * 布局： 单行布局，响应式栅格
+   * 内部第一行(全屏幕显示）： {numberCards}
+   * 内部第二行第一列Sales 
+   * 内部第二行第二列： Row中包含两个Col，第一个Col:Weather, 第二个Col: Quote
+   */
   return (
     <Page loading={loading.models.dashboard && sales.length === 0} className={styles.dashboard}>
       <Row gutter={24}>
