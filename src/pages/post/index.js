@@ -14,13 +14,18 @@ const EnumPostStatus = {
   PUBLISHED: 2,
 }
 
-
-const Index = ({
-  post, dispatch, loading, location,
-}) => {
-  const { list, pagination } = post
+const Index = (props) => {
+  const { post, dispatch, loading, location } = props;
+  const { list, pagination } = post;
   const { query, pathname } = location
+  // Index 是functional component
+  // data source: this.props
+  // { location: {query, pathname, ...}}
+  // 页面刚加载时只有pathname， query来源
 
+  // listProps是List的数据源
+  // type: Object
+  // data source: this.props(pagination, list)
   const listProps = {
     pagination,
     dataSource: list,

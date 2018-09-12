@@ -80,10 +80,15 @@ export default modelExtend(pageModel, {
       }
     },
 
+
+    // id: currentItem id, 点击update时设置
+    // payload: 
+    // newUser: 要改变的user全部字段
     * update ({ payload }, { select, call, put }) {
       const id = yield select(({ user }) => user.currentItem.id)
       const newUser = { ...payload, id }
       const data = yield call(update, newUser)
+      // console.log(user.currentItem);
       if (data.success) {
         yield put({ type: 'hideModal' })
       } else {

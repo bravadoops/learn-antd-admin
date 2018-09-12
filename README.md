@@ -5,3 +5,10 @@
 # 官方文档与连接
 [Dva Tutorial](https://dvajs.com/guide/examples-and-boilerplates.html#%E5%AE%98%E6%96%B9)    
 [Antd Admin](https://github.com/zuiidea/antd-admin)
+
+# 日志
+## 8.28
+* dashboard/index 使用map产生numberCards
+
+## 8.30
+* post/index

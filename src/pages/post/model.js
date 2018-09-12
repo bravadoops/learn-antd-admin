@@ -22,6 +22,7 @@ export default modelExtend(pageModel, {
     },
   },
 
+  // namespace: list的state有list pagination从payload可以看出
   effects: {
     * query ({
       payload,

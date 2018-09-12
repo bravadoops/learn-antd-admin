@@ -25,7 +25,9 @@ const List = ({
       })
     }
   }
-
+  /**
+   * 箭头函数render的参数text record 来源: dataIndex
+   */
   const columns = [
     {
       title: 'Avatar',
